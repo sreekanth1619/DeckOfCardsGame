@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 /**
  * @author N Sreekanth
- * Purpose  - There should be minimum 2 and maximum 4 players in the Game
+ * Purpose  - In this method we have defined the sequence of the player.
  * @version - 16.0
  * 
  */
@@ -69,6 +69,18 @@ public class DeckOfCardsGame {
 	            System.out.println("Please enter number of players in the Range");
 	            this.noOfPlayers();
 	            scanner.close();
+	        }
+	    }
+	    
+	        /*
+	        In this method we have defined the sequence of the player.
+	        We are itterating the loop till player input.
+	        */
+	    
+	    public void sequenceOfPlay(int player) {
+	        System.out.println("\nSequence of cards are below : ");
+	        for (int i = 1; i <= player; i++) {
+	            System.out.println("\nPlayer " + i + " Getting card.............");
 	        }
 	    }
 	    
