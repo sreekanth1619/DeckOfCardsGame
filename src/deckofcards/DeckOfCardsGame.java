@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 /**
  * @author N Sreekanth
- * Purpose  - In this method we have defined the sequence of the player.
+ * Purpose  - In this method we have to shuffle the cards.
  * @version - 16.0
  * 
  */
@@ -83,5 +83,22 @@ public class DeckOfCardsGame {
 	            System.out.println("\nPlayer " + i + " Getting card.............");
 	        }
 	    }
+	    
+	    /*
+        Created a method to shuffle the cards
+        Shuffling the cards by using Math.random and storing it in temp variable of ArrayList
+        Again we are assigning temp to cardDecck
+         */
+        public static void toshuffle(ArrayList<String> cardsDeck) {
+            System.out.println("shuffling the cards before Distribution");
+            ArrayList<String> temp = new ArrayList<String>();
+            while (!cardsDeck.isEmpty()) {
+                int loc = (int) (Math.random() * cardsDeck.size());
+                temp.add(cardsDeck.get(loc));
+                cardsDeck.remove(loc);
+            }
+            cardsDeck = temp;
+            toDisplay(cardsDeck);
+        }
 	    
   }
